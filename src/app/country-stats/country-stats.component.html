@@ -24,19 +24,29 @@
     <tbody class="text-right">
     <tr *ngFor="let countryStat of countryStats; let i = index">
       <th scope="row">{{ i + 1 }}</th>
-      <td class="text-left">{{ countryStat.country }}</td>
+      <td class="text-left">
+        <a href="#!">{{ countryStat.country }}</a>
+      </td>
       <td>{{ countryStat.cases | number }}</td>
-      <td>{{ countryStat.todayCases | number }}</td>
+      <td [ngClass]="{'bg-warning': countryStat.todayCases > 0}">
+        {{
+          countryStat.todayCases > 0 ? ('+' + countryStat.todayCases): ''
+        }}
+      </td>
       <td>{{ countryStat.deaths | number }}</td>
-      <td>{{ countryStat.todayDeaths | number }}</td>
-      <td>{{ countryStat.active | number }}</td>
+      <td class="text-white" [class.bg-danger]="countryStat.todayDeaths > 0">
+        {{
+          countryStat.todayDeaths > 0 ? ('+' + countryStat.todayDeaths): ''
+        }}
+      </td>
       <td>{{ countryStat.recovered | number }}</td>
+      <td>{{ countryStat.active | number }}</td>
       <td>{{ countryStat.critical | number }}</td>
       <td>{{ countryStat.casesPerOneMillion | number }}</td>
       <td>{{ countryStat.deathsPerOneMillion | number }}</td>
       <td>{{ countryStat.tests | number }}</td>
       <td>{{ countryStat.testsPerOneMillion | number }}</td>
-      <td>{{ countryStat.population | number }}</td>
+      <td class="text-info">{{ countryStat.population | number }}</td>
     </tr>
     </tbody>
   </table>
