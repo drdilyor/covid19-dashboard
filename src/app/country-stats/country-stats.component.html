@@ -25,18 +25,18 @@
     <tr *ngFor="let countryStat of countryStats; let i = index">
       <th scope="row">{{ i + 1 }}</th>
       <td class="text-left">{{ countryStat.country }}</td>
-      <td>{{ countryStat.cases }}</td>
-      <td>{{ countryStat.todayCases }}</td>
-      <td>{{ countryStat.deaths }}</td>
-      <td>{{ countryStat.todayDeaths }}</td>
-      <td>{{ countryStat.active }}</td>
-      <td>{{ countryStat.recovered }}</td>
-      <td>{{ countryStat.critical }}</td>
-      <td>{{ countryStat.casesPerOneMillion }}</td>
-      <td>{{ countryStat.deathsPerOneMillion }}</td>
-      <td>{{ countryStat.tests }}</td>
-      <td>{{ countryStat.testsPerOneMillion }}</td>
-      <td>{{ countryStat.population }}</td>
+      <td>{{ countryStat.cases | number }}</td>
+      <td>{{ countryStat.todayCases | number }}</td>
+      <td>{{ countryStat.deaths | number }}</td>
+      <td>{{ countryStat.todayDeaths | number }}</td>
+      <td>{{ countryStat.active | number }}</td>
+      <td>{{ countryStat.recovered | number }}</td>
+      <td>{{ countryStat.critical | number }}</td>
+      <td>{{ countryStat.casesPerOneMillion | number }}</td>
+      <td>{{ countryStat.deathsPerOneMillion | number }}</td>
+      <td>{{ countryStat.tests | number }}</td>
+      <td>{{ countryStat.testsPerOneMillion | number }}</td>
+      <td>{{ countryStat.population | number }}</td>
     </tr>
     </tbody>
   </table>
