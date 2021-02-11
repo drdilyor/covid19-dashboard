@@ -21,22 +21,22 @@
       <th scope="col">Population</th>
     </tr>
     </thead>
-    <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>USA</td>
-      <td>27,897,214</td>
-      <td>483,200</td>
-      <td>17,827,323</td>
-      <td>9,586,691</td>
-      <td>21,018</td>
-      <td>83,979</td>
-      <td>1,455</td>
-      <td>328,475,246</td>
-      <td>328,475,246</td>
-      <td>328,475,246</td>
-      <td>988,808</td>
-      <td>332,193,277</td>
+    <tbody class="text-right">
+    <tr *ngFor="let countryStat of countryStats; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td class="text-left">{{ countryStat.country }}</td>
+      <td>{{ countryStat.cases }}</td>
+      <td>{{ countryStat.todayCases }}</td>
+      <td>{{ countryStat.deaths }}</td>
+      <td>{{ countryStat.todayDeaths }}</td>
+      <td>{{ countryStat.active }}</td>
+      <td>{{ countryStat.recovered }}</td>
+      <td>{{ countryStat.critical }}</td>
+      <td>{{ countryStat.casesPerOneMillion }}</td>
+      <td>{{ countryStat.deathsPerOneMillion }}</td>
+      <td>{{ countryStat.tests }}</td>
+      <td>{{ countryStat.testsPerOneMillion }}</td>
+      <td>{{ countryStat.population }}</td>
     </tr>
     </tbody>
   </table>
