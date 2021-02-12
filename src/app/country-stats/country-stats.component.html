@@ -1,6 +1,15 @@
+<!--suppress HtmlFormInputWithoutLabel -->
 <div class="row">
-  <div class="col text-center">
+  <div class="col-12 col-md-8 text-center text-md-left">
     <h2>Stats by Country</h2>
+  </div>
+  <div class="col-12 col-md-4 input-group mb-3">
+    <input
+        [(ngModel)]="searchKeyword"
+        (ngModelChange)="onCountrySearch()"
+        type="text"
+        class="form-control"
+        placeholder="Search">
   </div>
   <table class="table table-bordered table-responsive">
     <thead>
