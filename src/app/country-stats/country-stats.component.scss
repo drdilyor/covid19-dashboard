@@ -1,5 +1,12 @@
 table {
+  max-height: 100vh;
   font-weight: bold;
+
+  thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
 }
 
 .bg-green {
