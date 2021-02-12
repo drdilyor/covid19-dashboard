@@ -23,7 +23,9 @@
     </thead>
     <tbody class="text-right">
     <tr *ngFor="let countryStat of countryStats; let i = index" [class.bg-green]="countryStat.active == 0">
-      <th scope="row">{{ i + 1 }}</th>
+      <th class="text-muted font-weight-normal" scope="row">
+        {{ i + 1 }}
+      </th>
       <td class="text-left">
         <a href="#!">{{ countryStat.country }}</a>
       </td>
