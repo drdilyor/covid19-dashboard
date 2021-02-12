@@ -1,12 +1,15 @@
 <div class="row">
-  <div class="col text-center">
-    <h1>United States</h1>
+  <div class="col text-center" *ngIf="countryStat">
+    <h1>
+      <img src="{{ countryStat.countryInfo.flag }}" alt="flag" class="country-flag">
+      {{ countryStat.country }}
+    </h1>
     <hr>
     <h2>Coronavirus Cases</h2>
-    <h1 class="text-warning">28,003,772</h1>
+    <h1 class="text-warning">{{ countryStat.cases | number }}</h1>
     <h2>Deaths</h2>
-    <h1 class="text-danger">486,929</h1>
+    <h1 class="text-danger">{{ countryStat.deaths | number }}</h1>
     <h2>Recovered</h2>
-    <h1 class="text-success">17,932,112</h1>
+    <h1 class="text-success">{{ countryStat.recovered | number}}</h1>
   </div>
 </div>
