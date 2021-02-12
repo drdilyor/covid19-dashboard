@@ -36,7 +36,7 @@
         {{ i + 1 }}
       </th>
       <td class="text-left">
-        <a href="#!">{{ countryStat.country }}</a>
+        <a href="country">{{ countryStat.country }}</a>
       </td>
       <td>{{ countryStat.cases | number }}</td>
       <td [ngClass]="{'bg-warning': countryStat.todayCases > 0}">
