@@ -9,7 +9,9 @@ import { MainStatsComponent } from './main-stats/main-stats.component';
 import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CountryPageComponent } from './country-page/country-page.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {FormsModule} from '@angular/forms';
     HeaderComponent,
     MainStatsComponent,
     CountryStatsComponent,
-    FooterComponent
+    FooterComponent,
+    CountryPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
