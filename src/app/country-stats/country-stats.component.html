@@ -1,15 +1,21 @@
 <!--suppress HtmlFormInputWithoutLabel -->
 <div class="row">
-  <div class="col-12 col-md-8 text-center text-md-left">
+  <div class="col-12 col-md-6 col-lg-8 text-center text-md-left">
     <h2>Stats by Country</h2>
   </div>
-  <div class="col-12 col-md-4 input-group mb-3">
+  <div class="col-12 col-md-6 col-lg-4 input-group mb-3">
     <input
         [(ngModel)]="searchKeyword"
         (ngModelChange)="onCountrySearch()"
         type="text"
         class="form-control"
         placeholder="Search">
+    <select [(ngModel)]="sortBy" (ngModelChange)="onSortChange()">
+      <option value="country">Sort by country</option>
+      <option value="-cases">Sort by cases</option>
+      <option value="-active">Sort by active</option>
+      <option value="-deaths">Sort by deaths</option>
+    </select>
   </div>
   <table class="table table-bordered table-responsive">
     <thead>
