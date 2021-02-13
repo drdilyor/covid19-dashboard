@@ -1,10 +1,12 @@
+body {
+  position: relative;
+}
 table {
-  max-height: 100vh;
   font-weight: bold;
 
-  thead {
+  thead th {
     position: sticky;
-    top: 0;
+    top: -2px;
     background-color: white;
   }
 }
